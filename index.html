@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
-    <link rel="shortcut icon" type="image" href="img/MicrosoftTeams-image.png" sizes="20x20" >
+    <script src="js/main.js" defer></script>
+    <link rel="shortcut icon" type="image" href="img/MicrosoftTeams-image.png" sizes="64x64">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <main>
+        <div class="">
+            <h1>Dashboard</h1>
+            <img src="img/MicrosoftTeams-image.png" alt="">
+        </div>
+        <div class="controlPnl">
+            <div class="cntrlLamp">
+                <h3>Control Lampjes</h3>
+                <input id="js--slider1" type="range" min="0" max="100" step="25">
+                <input id="js--slider2" type="range" min="0" max="100" step="25">
+                <input id="js--slider3" type="range" min="0" max="100" step="25">
+            </div>
+            <div class="cntrlValue">
+                <h3>Lampjes Sterkte</h3>
+                <div class="values">
+                    <p id="js--rangeValue1">0%</p>
+                    <p id="js--rangeValue2">0%</p>
+                    <p id="js--rangeValue3">0%</p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
