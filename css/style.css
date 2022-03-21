@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.weekweerbericht{
+    width: 30rem;
+    height: 30rem;
+    outline-style: solid;
+    display: flex; 
+    font-size: 1.5rem;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.weekweerbericht > h2{
+    margin: 0.5rem;
+}
+.weekweerbericht > h3{
+    margin: 0.5rem;
+}
+
+.weerbericht{
+    width: 30rem;
+    height: 30rem;
+    outline-style: solid;
+    display: flex; 
+    font-size: 1.5rem;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.weerbericht > h2{
+    margin: 0.5rem;
+}
+.weerbericht > h3{
+    margin: 0.5rem;
+}
