@@ -18,6 +18,7 @@ function realtimeClock() {
         hours + " : " + minutes + " : " + seconds + " " + amPm;
     var t = setTimeout(realtimeClock, 500);
 }
+
 const rangeValue1 = document.getElementById("js--rangeValue1");
 const rangeValue2 = document.getElementById("js--rangeValue2");
 const rangeValue3 = document.getElementById("js--rangeValue3");
