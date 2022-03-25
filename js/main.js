@@ -19,6 +19,15 @@ function realtimeClock() {
     var t = setTimeout(realtimeClock, 500);
 }
 
+const date = document.getElementById("date")
+var today = new Date().toLocaleDateString('nl-NL', {  
+    day : 'numeric',
+    month : 'long',
+    year : 'numeric'
+});
+
+date.innerText = today
+
 const rangeValue1 = document.getElementById("js--rangeValue1");
 const rangeValue2 = document.getElementById("js--rangeValue2");
 const rangeValue3 = document.getElementById("js--rangeValue3");
@@ -42,3 +51,4 @@ slider2.oninput = function(){
 slider3.oninput = function(){
     rangeValue3.innerText = slider3.value + "%"
 }
+
