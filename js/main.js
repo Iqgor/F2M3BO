@@ -19,6 +19,15 @@ function realtimeClock() {
     var t = setTimeout(realtimeClock, 500);
 }
 
+const date = document.getElementById("date")
+var today = new Date().toLocaleDateString('nl-NL', {  
+    day : 'numeric',
+    month : 'long',
+    year : 'numeric'
+});
+
+date.innerText = today
+
 const rangeValue1 = document.getElementById("js--rangeValue1");
 const rangeValue2 = document.getElementById("js--rangeValue2");
 const rangeValue3 = document.getElementById("js--rangeValue3");
@@ -56,3 +65,4 @@ let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=netherlands&
 .then(function(realData){
     temp.innerText = realData.main.temp + " °C"
 })
+
