@@ -34,13 +34,18 @@ body{
     padding-bottom: 2rem;
 }
 
+.text--logo > p > img{
+    width: 12%;
+    height: 12%;
+}
+
 .clock{
     width: 10px;
     height: 10px;
 }
 
 .controlPnl{
-   
+    margin: 0.5rem 5rem 2rem 5rem; 
     width: 50rem;
     height: 100%;
 }
@@ -49,7 +54,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.5rem 5rem 2rem 5rem; 
     padding: 2.5rem;
     padding-bottom:4rem ;
     gap: 5rem;
@@ -92,7 +96,7 @@ body{
 
 .cntrlValue{
     text-align: center;
-    margin: 0.5rem 5rem 2rem 5rem;
+    margin-top: 2rem;
     padding: 2.5rem;
     padding-bottom:4rem ;
     gap: 5rem;
@@ -119,7 +123,7 @@ body{
 }
 
 .weekweerbericht{
-    width: 30rem;
+    width: 50rem;
     height: 30rem;
     outline-style: solid;
     display: flex; 
@@ -136,7 +140,7 @@ body{
 }
 
 .weerbericht{
-    width: 30rem;
+    width: 50rem;
     height: 30rem;
     outline-style: solid;
     display: flex; 

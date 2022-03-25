@@ -52,3 +52,17 @@ slider3.oninput = function(){
     rangeValue3.innerText = slider3.value + "%"
 }
 
+
+const temp = document.getElementById("temp")
+
+
+let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=netherlands&units=metric&appid=8a490c6651725451fa03123bd0d7b472")
+
+.then(function(response){
+    return response.json();
+
+})
+.then(function(realData){
+    temp.innerText = realData.main.temp + " °C"
+})
+
