@@ -27,14 +27,13 @@ body{
     height: 25%;
     width: 25%;
     object-fit: cover;
-    float: left;
 }
 
 .text--logo > h2 {
     padding-bottom: 2rem;
 }
 
-.text--logo > p > img{
+.text--logo > p >img{
     width: 12%;
     height: 12%;
 }
@@ -42,6 +41,14 @@ body{
 .clock{
     width: 1rem;
     height: 1rem;
+}
+
+.kosten-maand{
+    margin: 5rem; 
+    width: 40rem;
+    height: 100%;
+    outline: solid;
+    padding-bottom: 4rem;
 }
 
 .controlPnl{

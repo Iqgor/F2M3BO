@@ -71,6 +71,28 @@ let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=netherlands&
     temp.innerText = realData.main.temp + " °C"
 })
 
+//pie kosten-maand
+
+var ctx1 = document.getElementById('myChart1');
+var stars = [109, 36, 34];
+var frameworks = ['Gas', 'Water', 'Elektriciteit']; 
+var myChart1 = new Chart(ctx1, { 
+    type: 'pie', 
+    data: {    
+        labels: frameworks,     
+        datasets: [{ 
+            data: stars,
+            backgroundColor: [  
+                "rgba(192, 192, 192, 1)", 
+                "rgba(54, 162, 235, 1)", 
+                "rgba(255, 206, 86, 1)", 
+            ],
+            borderColor: "",
+            borderWidth: 1 
+        }]      
+    }, 
+}) 
+
 
 //chart Gasgebruik
 
@@ -133,4 +155,5 @@ const myChart = new Chart(ctx, {
         }
     }
 });
+
 
