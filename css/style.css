@@ -130,20 +130,63 @@ body{
 }
 
 .weekweerbericht{
+    padding: 2rem;
+    margin: 5rem;
     width: 50rem;
     height: 30rem;
     outline-style: solid;
     display: flex; 
-    font-size: 1.5rem;
-    flex-direction: column;
-    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.weekweerbericht > h2{
-    margin: 0.5rem;
+.card{
+    padding: 1rem;
+    width: 100%;
 }
-.weekweerbericht > h3{
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button{
     margin: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    height: 3.1rem; 
+    width:  3.1rem;
+    color: black;
+    background: none;
+}
+
+.button:hover{
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-bar{
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-size: 80%;
+    box-shadow: 1px 1px 10px white, 1px 1px 10px;
+    color: black;
+    width: 70%;
+    
+}
+
+.icon{
+    height: 8rem;
+}
+
+.temp{
+    margin: 0;
 }
 
 .weerbericht{
