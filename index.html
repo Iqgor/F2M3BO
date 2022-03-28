@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <link rel="shortcut icon" type="image" href="img/MicrosoftTeams-image.png" sizes="64x64">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +17,21 @@
 <body onload="realtimeClock()">
     <main>
         <div class="card--logo">
-            <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler">
-            <div class="text--logo">
-                <h2>House handler</h2>
-                <p id="date"> datum</p>
-                <div id="clock"></div>
-                <p id="temp">temperatuur</p>
-                <p><img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAtklEQVRIie2TMQ7CMAxFX3oFUK4DExLHAYSEoAPqxH3YcwmuwsTQMtRFRSqtDQlTnhQpre3/HUuGTGTOwCWleCMnuklfPLrJkHiyl2Qm6WavpkjUyKhBAVSAN+h4qVE1XNGO4aY08ZLbSK2poFTkl8aGXiYnwMn3EgjAXU4AFhJzkmsZ6RtHPm/y4VvRjhVQAw9gA8yAObCVfzWw/sXgStvpbiC2l1gYE3C9u2mBFDj4w6JlJnkCFrMzvTi5AQMAAAAASUVORK5CYII=" />6:29
-                    / </p>
+            <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler" >
+        <div class="text--logo">
+            <h2>House handler</h2>
+            <p id="date"> datum</p>
+            <div id="clock">clock</div>
+            <p id="temp">temperatuur</p>
+            <p> <img src="img/download.png"/> 07:22 / <img src="img/icons8-sunset-24.png"/> 20:08 
+            </p>
             </div>
+
+        </div>
+        <div class="kosten-maand">
+            <canvas id="myChart1" >
+
+            </canvas>
         </div>
 
         <div class="controlPnl">
@@ -71,7 +77,12 @@
                 00:00 01:00
             </h3>
         </div>
+        <div class="gasgebruik">
+            <h2>Gasgebruik per 3m</h2>
+            <canvas id="myChart" width="200" height="200"></canvas>
+        </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 </body>
 
 </html>
