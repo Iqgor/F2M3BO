@@ -1,3 +1,5 @@
+//klok en datum
+
 function realtimeClock() {
     
     var rtClock = new Date();
@@ -28,6 +30,8 @@ var today = new Date().toLocaleDateString('nl-NL', {
 
 date.innerText = today
 
+//sliders
+
 const rangeValue1 = document.getElementById("js--rangeValue1");
 const rangeValue2 = document.getElementById("js--rangeValue2");
 const rangeValue3 = document.getElementById("js--rangeValue3");
@@ -52,6 +56,7 @@ slider3.oninput = function(){
     rangeValue3.innerText = slider3.value + "%"
 }
 
+//Temperatuur
 
 const temp = document.getElementById("temp")
 
@@ -66,10 +71,12 @@ let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=netherlands&
     temp.innerText = realData.main.temp + " °C"
 })
 
-var ctx = document.getElementById('myChart');
+//pie kosten-maand
+
+var ctx1 = document.getElementById('myChart1');
 var stars = [109, 36, 34];
 var frameworks = ['Gas', 'Water', 'Elektriciteit']; 
-var myChart = new Chart(ctx, { 
+var myChart1 = new Chart(ctx1, { 
     type: 'pie', 
     data: {    
         labels: frameworks,     
@@ -85,3 +92,68 @@ var myChart = new Chart(ctx, {
         }]      
     }, 
 }) 
+
+
+//chart Gasgebruik
+
+
+
+const ctx = document.getElementById('myChart').getContext('2d');
+//Chart.defaults.global.defaultFontFamily='"Lato",sans-serif';
+
+const myChart = new Chart(ctx, {
+    
+    type: 'line',
+    data: {
+        labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+        datasets: [{
+            labels: "this wil be hidden",
+            data: [4.4,3.8,5.0,3.7, 4.3, 4.8, 4.1],
+            backgroundColor: [
+                'black'
+                
+            ],
+            borderColor: [
+                'black'
+                
+            ],
+           
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                suggestedMin: 4,
+                suggestedMax: 6,
+                
+            },
+            x: {
+                ticks: {
+                    
+                    font: {
+                        size: 20,
+                       
+                    }
+                }
+            },
+            y:{
+                ticks: {
+                    font: {
+                        size: 20,
+                    }
+                }
+             
+            }
+        },
+        plugins: {
+            legend: {
+                display: false,
+                
+            },
+           
+        }
+    }
+});
+
+
