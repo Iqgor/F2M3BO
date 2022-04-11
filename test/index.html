@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <link rel="shortcut icon" type="image" href="img/MicrosoftTeams-image.png" sizes="64x64">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body onload="realtimeClock()">
+    <main class="dashboard">
+        <section class="left">
+            <article class="card card--first">
+                <div class="div--cont">
+                    <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler" >
+                </div>
+                <div class="text--logo">
+                    <h2>House Handler</h2>
+                    <p id="date"> datum</p>
+                    <div id="clock">clock</div>
+                    <p id="temp">temperatuur</p>
+                    <p> <img src="img/download.png"/> 07:22 / <img src="img/icons8-sunset-24.png"/> 20:08 
+                    </p>
+                </div>
+            </article>
+            <article class="card card--second">
+                <div class="cntrlLamp">
+                    <h3>Control Lampjes</h3>
+                    <input id="js--slider1" type="range" min="0" max="100" step="25">
+                    <input id="js--slider2" type="range" min="0" max="100" step="25">
+                    <input id="js--slider3" type="range" min="0" max="100" step="25">
+                </div>
+            </article>
+            <article class="card card--third">
+                <h3>Kosten per Maand</h3>
+                <canvas id="myChart1" >
+
+                </canvas>
+            </article>
+            <article class="card card--fourth">
+                <h3>Verbruik Apparaten in KwH</h3>
+                <canvas id="myChart2"></canvas>
+            </article>
+        </section>
+        <section class="right">
+            <article class="card card--fifth"></article>
+            <article class="card card--sixth"></article>
+            <article class="card card--seventh"></article>
+            <article class="card card--eight"></article>
+            <article class="card card--ninth"></article>
+            <article class="card card--tenth"></article>
+            <article class="card card--eleventh"></article>
+            <article class="card card--twelfth"></article>
+        </section>
+    </main>
+</body>
+</html>
