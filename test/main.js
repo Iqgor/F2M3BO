@@ -94,17 +94,73 @@ var today = new Date().toLocaleDateString('nl-NL', {
 
 date.innerText = today
 
+//locatie//
+
+const locatie = document.getElementById('locatie')
+
+console.log(locatie)
+
+navigator.geolocation.getCurrentPosition((position) => {
+    positielat = position.coords.latitude.toFixed(0)
+    
+    positielong = position.coords.longitude.toFixed(0)
+    const temp = document.getElementById("temp")
+
+
+    let data = fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + positielat + "&lon=" + positielong + "&units=metric&appid=8a490c6651725451fa03123bd0d7b472")
+
+    .then(function(response){
+    return response.json();
+        
+    })
+    .then(function(realData){
+    temp.innerText = realData.main.temp + " °C"
+    console.log(realData)
+    })
+  });
+
+
 //Temperatuur
 
-const temp = document.getElementById("temp")
 
 
-let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=netherlands&units=metric&appid=8a490c6651725451fa03123bd0d7b472")
-
-.then(function(response){
-    return response.json();
-
-})
-.then(function(realData){
-    temp.innerText = realData.main.temp + " °C"
-})
+//weerbericht vandaag//
+let weather = {
+    
+    fetchWeather: function(city) {
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" 
+        + city
+        + "&units=metric&appid="
+        + "8a490c6651725451fa03123bd0d7b472"
+        )    
+         .then((response) => response.json())
+         .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function(data) {
+     const { name } = data;
+     const { icon , description } = data.weather[0];
+     const { temp, humidity } = data.main;
+     const { speed } = data.wind;
+     console.log(name,icon,description,temp,humidity,speed)
+     document.querySelector(".city").innerHTML = "Weer in " + name;
+     document.querySelector(".icon").src = "https://openweathermap.org/img/wn/"+ icon + "@2x.png"
+     document.querySelector(".temp").innerText = temp + "°C";
+     document.querySelector(".humidity").innerText = "Vochtigheid: " + humidity + "%";
+     document.querySelector(".wind").innerText = "Wind snelheid: " + speed + "km/h";
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    }
+ };
+ 
+ document
+   .querySelector(".search button")
+   .addEventListener("click", function () {
+     weather.search();
+ });
+ 
+ document.querySelector(".search-bar").addEventListener("keyup", function(event) {
+     if (event.key == "Enter") {
+         weather.search();
+     } 
+ })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,19 +14,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body onload="realtimeClock()">
     <main class="dashboard">
         <section class="left">
             <article class="card card--first">
                 <div class="div--cont">
-                    <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler" >
+                    <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler">
                 </div>
                 <div class="text--logo">
                     <h2>House Handler</h2>
                     <p id="date"> datum</p>
                     <div id="clock">clock</div>
                     <p id="temp">temperatuur</p>
-                    <p> <img src="img/download.png"/> 07:22 / <img src="img/icons8-sunset-24.png"/> 20:08 
+                    <p> <img src="img/download.png" /> 07:22 / <img src="img/icons8-sunset-24.png" /> 20:08
                     </p>
                 </div>
             </article>
@@ -39,7 +41,7 @@
             </article>
             <article class="card card--third">
                 <h3>Kosten per Maand</h3>
-                <canvas id="myChart1" >
+                <canvas id="myChart1">
 
                 </canvas>
             </article>
@@ -55,9 +57,31 @@
             <article class="card card--eight"></article>
             <article class="card card--ninth"></article>
             <article class="card card--tenth"></article>
-            <article class="card card--eleventh"></article>
-            <article class="card card--twelfth"></article>
+            <article class="card card--eleventh">
+                <p id="locatie">locatie</p>
+            </article>
+            <article class="card card--twelfth">
+                <div class="cardweather">
+                    <div class="search">
+                        <input type="text" class="search-bar" placeholder="zoeken">
+                        <button class="button"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                                </path>
+                            </svg></button>
+                    </div>
+                    <div class="weather">
+                        <h2 class="city">Weer in Nederland</h2>
+                        <h1 class="temp">10°C</h1>
+                        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" class="icon" />
+                        <div class="humidity">Vochtigheid: 60%</div>
+                        <div class="wind">Wind snelheid: 6.2 km/h</div>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 </body>
+
 </html>
