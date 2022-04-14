@@ -2,10 +2,10 @@
 Dit word de repository van Duurzaam Huis BO  
 ## Team Leden
 <br>
-Roan Bulten \
-Igor Herrebrugh \
-Kiet Mandjes  \
-Milan Montauban  \
+Roan Bulten 
+Igor Herrebrugh 
+Kiet Mandjes 
+Milan Montauban
 <br/>
 Live site  
 <br>
