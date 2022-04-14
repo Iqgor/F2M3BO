@@ -17,7 +17,7 @@ body{
 
 .dashboard{
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -27,7 +27,8 @@ body{
     grid-template-columns: repeat(2, 1fr);
     background: #eee;
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.2);
-
+    gap:2rem;
+    grid-template-rows: repeat(2,30rem);
 }
 
 .right{
@@ -38,6 +39,7 @@ body{
     grid-template-rows: repeat(3,1fr);
     background: #eee;
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.2);
+    max-height:100vh;
 }
 
 .card{
@@ -127,9 +129,22 @@ body{
     grid-row: 2/3;
 }
 
+
 .card--third > h3{
-    padding-bottom:3rem ;
+    padding-bottom:2rem ;
     font-size: 3rem;
+}
+
+.card--third > canvas{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: scale(0.8);
+}
+
+canvas{
+    height: 100%;
+    width: 100%;
 }
 
 .div--cont{
@@ -176,7 +191,10 @@ body{
 
 .card--fifth{
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 1/2;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
 }
 .card--sixth{
     grid-column: 2/3;
@@ -198,11 +216,11 @@ body{
 .card--eleventh{
     grid-column: 1/3;
     grid-row: 3/4;
-    background: red;
+    
 }
 
 .card--twelfth{
-    height: 100%;
+    
     grid-column: 3/4;
     grid-row: 3/4;
 }
