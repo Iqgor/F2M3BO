@@ -23,6 +23,10 @@ var myChart1 = new Chart(ctx1, {
 
 // Verbruik Apparaten
 
+
+
+
+
 var ctx2 = document.getElementById("myChart2");
 var values = [10, 8, 12, 18, 30, 10, 8]
 var Apparaten = ['Wasmachine','Droger', 'Koelkast','Lokale Pc', ' Tv','Vaatwasser', 'Vriezer']
@@ -164,3 +168,49 @@ let weather = {
          weather.search();
      } 
  })
+
+//gasgebruik
+
+ const ctx = document.getElementById('myChart').getContext('2d');
+ //Chart.defaults.global.defaultFontFamily='"Lato",sans-serif';
+ 
+ const myChart = new Chart(ctx, {
+     
+     type: 'line',
+     data: {
+         labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+         datasets: [{
+             labels: "this wil be hidden",
+             data: [4.4,3.8,5.0,3.7, 4.3, 4.8, 4.1],
+             backgroundColor: [
+                 'black'
+                 
+             ],
+             borderColor: [
+                 'black'
+                 
+             ],
+            
+             borderWidth: 1
+         }]
+     },
+     options: {
+         layout: {
+            padding: 1,     
+         },
+         aspectRatio: 1,
+         scales: {
+             y: {
+                suggestedMax: 5.2
+            }     
+         },
+         plugins: {
+             legend: {
+                 display: false,
+                 
+             },
+            
+         }
+     }
+ });
+ 
