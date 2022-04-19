@@ -29,6 +29,11 @@ body{
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.2);
     gap:2rem;
     grid-template-rows: repeat(2,30rem);
+  
+}
+
+.left > .card{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 4px;
 }
 
 .right{
@@ -42,9 +47,7 @@ body{
     max-height:100vh;
 }
 
-.card{
-    
-}
+
 
 .card--first { 
     display: flex;
@@ -189,6 +192,10 @@ canvas{
     font-size: 2.9rem;
 }
 
+.cardtop{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 4px;
+}
+
 .card--fifth{
     grid-column: 1/2;
     grid-row: 1/2;
@@ -198,10 +205,20 @@ canvas{
 }
 .card--sixth{
     grid-column: 2/3;
-    grid-row: 1/2;}
+    grid-row: 1/2;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+
 .card--seventh{
     grid-column: 3/4;
-    grid-row:1/2;}
+    grid-row:1/2;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
+}
 .card--eight
 {grid-column: 1/2;
     grid-row: 2/3;}
