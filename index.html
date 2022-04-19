@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body onload="realtimeClock()">
+<body onload="realtimeClock()" onload="DefaultScreen()">
     <main class="grid">
         <div class="card--logo">
             <img class="img--logo" src="img/MicrosoftTeams-image.png" alt="Logo house handler" >
@@ -70,12 +70,49 @@
                     <div class="wind">Wind snelheid: 6.2 km/h</div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="weerbericht">
-            <h2>Weerbericht van de dag.</h2>
-            <h3>
-                00:00 01:00
-            </h3>
+            <div>
+                <h1 class="Para1">5 Dagen weerbericht</h1>
+                <p id="inputContainer"> <input type="text" id="cityInput"></p>
+                <div class="buttons">
+                    <button type="button" onclick="GetInfo()">Zoek</button>
+                </div>
+                <h2 id="cityName">London</h2>
+            </div>
+    
+            <div class="weatherContainer">
+                <div class="iconsContainer">
+                    <div class="icons">
+                        <p class="weather" id="day1"></p>
+                        <p class="minValues" id="day1Min">Laden...</p>
+                        <p class="maxValues" id="day1Max">Laden...</p>
+                    </div>
+                    <div class="icons">
+                        <p class="weather" id="day2"></p>
+                        <p class="minValues" id="day2Min">Laden...</p>
+                        <p class="maxValues" id="day2Max">Laden...</p>
+                    </div>
+                    <div class="icons">
+                        <p class="weather" id="day3"></p>
+                        <p class="minValues" id="day3Min">Laden...</p>
+                        <p class="maxValues" id="day3Max">Laden...</p>
+                    </div>
+                    <div class="icons">
+                        <p class="weather" id="day4"></p>
+                        
+                        <p class="minValues" id="day4Min">Laden...</p>
+                        <p class="maxValues" id="day4Max">Laden...</p>
+                    </div>
+                    <div class="icons">
+                        <p class="weather" id="day5"></p>
+    
+                        <p class="minValues" id="day5Min">Laden...</p>
+                        <p class="maxValues" id="day5Max">Laden...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="gasgebruik">
             <h2>Gasgebruik per 3m</h2>

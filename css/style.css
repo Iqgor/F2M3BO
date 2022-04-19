@@ -191,7 +191,7 @@ body{
     height: 8rem;
 }
 
-.temp{
+.temp{ 
     margin: 0;
 }
 
@@ -205,11 +205,62 @@ body{
     margin: 5rem;
 }
 
-.weerbericht > h2{
-    margin: 0.5rem;
+.weekweerbericht{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.weerbericht > h3{
-    margin: 0.5rem;
+
+#cityInput, #cityName, #inputContainer,buttons{
+text-align:center;
+font-size:2rem;
+}
+
+.weatherContainer{
+    height: 10rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#iconsContainer{
+    transform: translate(-50%, -50%);
+    max-width: 1rem;
+}
+
+.icons{
+    float: left;
+    height: 15rem;
+    width: 5rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.minValues{
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6rem;
+    margin: 0;
+}
+
+
+.maxValues{
+    text-align: center;
+    display: inline-block;
+    height: 2.5rem;
+    width: 8.5rem;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .gasgebruik{
