@@ -286,21 +286,9 @@ canvas{
     margin: 0;
 }
 
-.weekweerbericht{
-    padding: 2rem;
-    margin: 5rem;
-    width: 50rem;
-    height: 30rem;
-    outline-style: solid;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-}
 
-.card{
-    padding: 1rem;
-    width: 100%;
-}
+
+
 
 .search{
     display: flex;
@@ -344,14 +332,7 @@ canvas{
     margin: 0;
 }
 
-.weerbericht{
-    width: 50rem;
-    height: 30rem;
-    display: flex; 
-    font-size: 1.5rem;
-    flex-direction: column;
-    margin: 5rem;
-}
+
 
 .weekweerbericht{
     display: flex;
@@ -359,7 +340,7 @@ canvas{
     align-items: center;
 }
 
-#cityInput, #cityName, #inputContainer,buttons{
+#cityInput, #cityName, #inputContainer,.buttons{
 text-align:center;
 font-size:2rem;
 }
@@ -385,10 +366,13 @@ font-size:2rem;
 
 .icons{
     float: left;
-    height: 15rem;
     width: 5rem;
     margin: 2rem;
     border-radius: 1rem;
+}
+
+.icons > p{
+    font-size: 150%;
 }
 
 .minValues{
