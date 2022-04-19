@@ -295,7 +295,7 @@ const myChart4 = new Chart(ctx4, {
         labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
         datasets: [{
             labels: "this wil be hidden",
-            data: [6.5,5.5,7.4,3.2,5.6,7.9,6.2],
+            data: [2240, 2241, 2256, 2259, 2267, 2269, 2274],
             backgroundColor: [
                 'black'
                 

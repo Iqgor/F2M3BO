@@ -58,9 +58,6 @@ body{
     grid-row: 1/2;
 }
 
-.card--second{
-}
-
 .cntrlLamp {
     display: flex;
     flex-direction: column;
