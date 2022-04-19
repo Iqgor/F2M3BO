@@ -285,3 +285,128 @@ canvas{
 .temp{
     margin: 0;
 }
+
+.weekweerbericht{
+    padding: 2rem;
+    margin: 5rem;
+    width: 50rem;
+    height: 30rem;
+    outline-style: solid;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    padding: 1rem;
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button{
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    height: 3.1rem; 
+    width:  3.1rem;
+    color: black;
+    background: none;
+}
+
+.button:hover{
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-bar{
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-size: 80%;
+    box-shadow: 1px 1px 10px white, 1px 1px 10px;
+    color: black;
+    width: 70%;
+}
+
+.icon{
+    height: 8rem;
+}
+
+.temp{ 
+    margin: 0;
+}
+
+.weerbericht{
+    width: 50rem;
+    height: 30rem;
+    display: flex; 
+    font-size: 1.5rem;
+    flex-direction: column;
+    margin: 5rem;
+}
+
+.weekweerbericht{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cityInput, #cityName, #inputContainer,buttons{
+text-align:center;
+font-size:2rem;
+}
+
+.weatherContainer{
+    height: 10rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#iconsContainer{
+    transform: translate(-50%, -50%);
+    max-width: 1rem;
+}
+
+.icons{
+    float: left;
+    height: 15rem;
+    width: 5rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.minValues{
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6rem;
+    margin: 0;
+}
+
+
+.maxValues{
+    text-align: center;
+    display: inline-block;
+    height: 2.5rem;
+    width: 8.5rem;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
