@@ -23,10 +23,6 @@ var myChart1 = new Chart(ctx1, {
 
 // Verbruik Apparaten
 
-
-
-
-
 var ctx2 = document.getElementById("myChart2");
 var values = [10, 8, 12, 18, 30, 10, 8]
 var Apparaten = ['Wasmachine','Droger', 'Koelkast','Lokale Pc', ' Tv','Vaatwasser', 'Vriezer']
@@ -213,4 +209,48 @@ let weather = {
          }
      }
  });
- 
+
+// stroom verbruik
+const ctx3 = document.getElementById('myChart6').getContext('2d');
+
+const myChart6 = new Chart(ctx3, {
+     
+    type: 'line',
+    data: {
+        labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+        datasets: [{
+            labels: "this wil be hidden",
+            data: [2240, 2241, 2256, 2259, 2267, 2269, 2274],
+            backgroundColor: [
+                'black'
+                
+            ],
+            borderColor: [
+                'black'
+                
+            ],
+           
+            borderWidth: 1
+        }]
+    },
+    options: {
+        layout: {
+           padding: 1,     
+        },
+        aspectRatio: 1,
+        scales: {
+            y: {
+               suggestedMax: 5.2
+           }     
+        },
+        plugins: {
+            legend: {
+                display: false,
+                
+            },
+           
+        }
+    }
+});
+
+

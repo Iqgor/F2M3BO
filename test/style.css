@@ -198,7 +198,11 @@ canvas{
 }
 .card--sixth{
     grid-column: 2/3;
-    grid-row: 1/2;}
+    grid-row: 1/2;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
+}
 .card--seventh{
     grid-column: 3/4;
     grid-row:1/2;}
