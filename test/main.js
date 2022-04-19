@@ -106,7 +106,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     positielong = position.coords.longitude.toFixed(0)
     const temp = document.getElementById("temp")
 
-
+    //Temperatuur
     let data = fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + positielat + "&lon=" + positielong + "&units=metric&appid=8a490c6651725451fa03123bd0d7b472")
 
     .then(function(response){
@@ -120,7 +120,7 @@ navigator.geolocation.getCurrentPosition((position) => {
   });
 
 
-//Temperatuur
+
 
 
 
@@ -165,56 +165,131 @@ let weather = {
      } 
  })
 
-//gasgebruik
+//Gasgebruik Chart 
 
  const ctx = document.getElementById('myChart').getContext('2d');
- //Chart.defaults.global.defaultFontFamily='"Lato",sans-serif';
- 
- const myChart = new Chart(ctx, {
-     
-     type: 'line',
-     data: {
-         labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
-         datasets: [{
-             labels: "this wil be hidden",
-             data: [4.4,3.8,5.0,3.7, 4.3, 4.8, 4.1],
-             backgroundColor: [
-                 'black'
-                 
-             ],
-             borderColor: [
-                 'black'
-                 
-             ],
-            
-             borderWidth: 1
-         }]
-     },
-     options: {
-         layout: {
-            padding: 1,     
-         },
-         aspectRatio: 1,
-         scales: {
-             y: {
-                suggestedMax: 5.2
-            }     
-         },
-         plugins: {
-             legend: {
-                 display: false,
-                 
-             },
-            
-         }
-     }
- });
+//Chart.defaults.global.defaultFontFamily='"Lato",sans-serif';
 
-// stroom verbruik
-const ctx3 = document.getElementById('myChart6').getContext('2d');
+const myChart = new Chart(ctx, {
+    
+    type: 'line',
+    data: {
+        labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+        datasets: [{
+            labels: "this wil be hidden",
+            data: [4.4,3.8,5.0,3.7, 4.3, 4.8, 4.1],
+            backgroundColor: [
+                'black'
+                
+            ],
+            borderColor: [
+                'black'
+                
+            ],
+           
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                suggestedMin: 4,
+                suggestedMax: 6,
+                
+            },
+            x: {
+                ticks: {
+                    
+                    font: {
+                        size: 20,
+                       
+                    }
+                }
+            },
+            y:{
+                ticks: {
+                    font: {
+                        size: 20,
+                    }
+                }
+             
+            }
+        },
+        plugins: {
+            legend: {
+                display: false,
+                
+            },
+           
+        }
+    }
+});
 
-const myChart6 = new Chart(ctx3, {
-     
+
+//Watervebruik Chart
+
+const ctx3 = document.getElementById('myChart3').getContext('2d');
+
+const myChart3 = new Chart(ctx3, {
+    
+    type: 'line',
+    data: {
+        labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+        datasets: [{
+            labels: "this wil be hidden",
+            data: [100,98,93,110, 107, 102, 96],
+            backgroundColor: [
+                'black'
+                
+            ],
+            borderColor: [
+                'black'
+                
+            ],
+           
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                suggestedMin: 4,
+                suggestedMax: 6,
+                
+            },
+            x: {
+                ticks: {
+                    
+                    font: {
+                        size: 20,
+                       
+                    }
+                }
+            },
+            y:{
+                ticks: {
+                    font: {
+                        size: 20,
+                    }
+                }
+             
+            }
+        },
+        plugins: {
+            legend: {
+                display: false,
+                
+            },
+           
+        }
+    }
+});
+//Stroomverbuik Chart
+
+const ctx4 = document.getElementById('myChart4').getContext('2d');
+
+const myChart4 = new Chart(ctx4, {
+    
     type: 'line',
     data: {
         labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
@@ -234,14 +309,29 @@ const myChart6 = new Chart(ctx3, {
         }]
     },
     options: {
-        layout: {
-           padding: 1,     
-        },
-        aspectRatio: 1,
         scales: {
             y: {
-               suggestedMax: 5.2
-           }     
+                suggestedMin: 4,
+                suggestedMax: 6,
+                
+            },
+            x: {
+                ticks: {
+                    
+                    font: {
+                        size: 20,
+                       
+                    }
+                }
+            },
+            y:{
+                ticks: {
+                    font: {
+                        size: 20,
+                    }
+                }
+             
+            }
         },
         plugins: {
             legend: {
